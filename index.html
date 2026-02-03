@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSBTE 3rd Semester Results</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="main-header">
+<header class="header">
     <h1>HSBTE</h1>
     <p>Haryana State Board of Technical Education</p>
     <span>3rd Semester Result Portal</span>
 </header>
 
-<!-- MAIN CONTENT -->
-<main>
-    <div class="result-card">
+<main class="container">
+
+    <!-- RESULT BOX -->
+    <section class="result-section">
         <h2>Check Your Result</h2>
 
-        <input
-            type="text"
-            id="rollNo"
-            placeholder="Enter Roll Number"
-            maxlength="12"
-        >
+        <input type="text" id="rollNo" placeholder="Enter Roll Number" maxlength="12">
 
         <button onclick="checkResult()">Search Result</button>
 
-        <!-- RESULT INFO -->
         <div id="resultBox" class="hidden">
             <p id="resultText"></p>
 
-            <!-- PDF PREVIEW -->
             <div class="preview-box">
                 <iframe id="pdfPreview"></iframe>
             </div>
@@ -40,25 +34,36 @@
             <a id="downloadBtn" download>Download Result PDF</a>
         </div>
 
-        <!-- ERROR -->
         <div id="errorBox" class="hidden"></div>
-    </div>
+    </section>
 
-    <!-- DEVELOPER INFO -->
-    <section class="developer-info">
-        <h3>Developer Information</h3>
-        <p><strong>Name:</strong> Vipul Bishnoi</p>
-        <p><strong>Email:</strong> vipulbishnoi2992@gmail.com</p>
-        <p><strong>Phone:</strong> 94******07</p>
+    <!-- ABOUT / DEVELOPER -->
+    <section class="about-section">
+        <h3>About Developer</h3>
+
+        <div class="about-item">
+            <strong>Name:</strong>
+            <span>Vipul Bishnoi</span>
+        </div>
+
+        <div class="about-item">
+            <strong>Email:</strong>
+            <span>vipulbishnoi2992@gmail.com</span>
+        </div>
+
+        <div class="about-item">
+            <strong>Phone:</strong>
+            <span>94******07</span>
+        </div>
 
         <a href="https://resume-vipul.netlify.app/" target="_blank" class="project-btn">
             Visit Portfolio
         </a>
     </section>
+
 </main>
 
-<!-- FOOTER -->
-<footer>
+<footer class="footer">
     <div>Vipul Bishnoi</div>
     <div>© 2026</div>
     <div>All Rights Reserved</div>
