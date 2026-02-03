@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +7,16 @@
 </head>
 <body>
 
-<header>
+<!-- HEADER -->
+<header class="main-header">
     <h1>HSBTE</h1>
-    <p class="sub-header">3rd Semester Results</p>
+    <p>Haryana State Board of Technical Education</p>
+    <span>3rd Semester Result Portal</span>
 </header>
 
+<!-- MAIN CONTENT -->
 <main>
-    <div class="card">
+    <div class="result-card">
         <h2>Check Your Result</h2>
 
         <input
@@ -24,19 +26,42 @@
             maxlength="12"
         >
 
-        <button onclick="checkResult()">View Result</button>
+        <button onclick="checkResult()">Search Result</button>
 
+        <!-- RESULT INFO -->
         <div id="resultBox" class="hidden">
             <p id="resultText"></p>
-            <a id="downloadBtn" href="#" download>Download PDF</a>
+
+            <!-- PDF PREVIEW -->
+            <div class="preview-box">
+                <iframe id="pdfPreview"></iframe>
+            </div>
+
+            <a id="downloadBtn" download>Download Result PDF</a>
         </div>
 
+        <!-- ERROR -->
         <div id="errorBox" class="hidden"></div>
     </div>
+
+    <!-- DEVELOPER INFO -->
+    <section class="developer-info">
+        <h3>Developer Information</h3>
+        <p><strong>Name:</strong> Vipul Bishnoi</p>
+        <p><strong>Email:</strong> vipulbishnoi2992@gmail.com</p>
+        <p><strong>Phone:</strong> 94******07</p>
+
+        <a href="https://resume-vipul.netlify.app/" target="_blank" class="project-btn">
+            Visit Portfolio
+        </a>
+    </section>
 </main>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 Vipul Bishnoi. All rights reserved.
+    <div>Vipul Bishnoi</div>
+    <div>© 2026</div>
+    <div>All Rights Reserved</div>
 </footer>
 
 <script src="script.js"></script>
