@@ -8,84 +8,81 @@
 body {
     background: #f2f6f9;
     color: #222;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /* HEADER */
-.main-header {
+.header {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
     text-align: center;
-    padding: 35px 20px;
+    padding: 40px 20px;
 }
 
-.main-header h1 {
-    font-size: 42px;
+.header h1 {
+    font-size: 38px;
     letter-spacing: 2px;
 }
 
-.main-header p {
-    margin-top: 6px;
-    font-size: 16px;
+.header p {
+    margin-top: 8px;
+    font-size: 15px;
 }
 
-.main-header span {
+.header span {
     display: block;
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 12px;
+    font-size: 17px;
     opacity: 0.9;
 }
 
-/* MAIN */
-main {
-    flex: 1;
+/* MAIN CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -40px;
+    gap: 40px;
 }
 
-/* RESULT CARD */
-.result-card {
+/* RESULT SECTION */
+.result-section {
     background: #fff;
     width: 100%;
     max-width: 520px;
-    padding: 40px;
+    padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     text-align: center;
-    animation: fadeUp 0.8s ease;
 }
 
-.result-card h2 {
+.result-section h2 {
     margin-bottom: 25px;
     color: #1e3c72;
 }
 
-input {
+.result-section input {
     width: 100%;
-    padding: 16px;
+    padding: 15px;
     font-size: 16px;
     border-radius: 10px;
     border: 1px solid #ccc;
     margin-bottom: 18px;
 }
 
-button {
+.result-section button {
     width: 100%;
-    padding: 16px;
-    font-size: 17px;
+    padding: 15px;
+    font-size: 16px;
     background: #1e3c72;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
+.result-section button:hover {
     background: #16325c;
 }
 
@@ -96,10 +93,10 @@ button:hover {
 
 .preview-box {
     margin-top: 15px;
-    height: 350px;
-    border: 1px solid #ddd;
+    height: 320px;
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid #ddd;
 }
 
 .preview-box iframe {
@@ -113,13 +110,9 @@ button:hover {
     margin-top: 15px;
     padding: 12px 22px;
     background: #2a5298;
-    color: #fff;
+    color: white;
     border-radius: 8px;
     text-decoration: none;
-}
-
-#downloadBtn:hover {
-    background: #1e3c72;
 }
 
 /* ERROR */
@@ -129,45 +122,48 @@ button:hover {
     font-weight: 600;
 }
 
-/* DEV INFO */
-.developer-info {
-    margin-top: 35px;
+/* ABOUT SECTION */
+.about-section {
     background: #fff;
-    padding: 25px 35px;
-    border-radius: 14px;
     width: 100%;
     max-width: 520px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.developer-info h3 {
-    margin-bottom: 15px;
+.about-section h3 {
+    margin-bottom: 20px;
     color: #1e3c72;
+}
+
+.about-item {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 15px;
 }
 
 .project-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 18px;
     padding: 12px 20px;
     background: #1e3c72;
-    color: #fff;
+    color: white;
     border-radius: 8px;
     text-decoration: none;
 }
 
-.project-btn:hover {
-    background: #16325c;
-}
-
 /* FOOTER */
-footer {
+.footer {
     background: #1e3c72;
     color: #fff;
     text-align: center;
-    padding: 15px 10px;
-    font-size: 14px;
+    padding: 18px 10px;
     line-height: 1.6;
+    font-size: 14px;
 }
 
 /* UTIL */
@@ -175,7 +171,9 @@ footer {
     display: none;
 }
 
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .container {
+        gap: 50px;
+    }
 }
