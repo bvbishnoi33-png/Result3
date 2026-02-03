@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSBTE 3rd Semester Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>HSBTE</h1>
+    <p class="sub-header">3rd Semester Results</p>
+</header>
+
+<main>
+    <div class="card">
+        <h2>Check Your Result</h2>
+
+        <input
+            type="text"
+            id="rollNo"
+            placeholder="Enter Roll Number"
+            maxlength="12"
+        >
+
+        <button onclick="checkResult()">View Result</button>
+
+        <div id="resultBox" class="hidden">
+            <p id="resultText"></p>
+            <a id="downloadBtn" href="#" download>Download PDF</a>
+        </div>
+
+        <div id="errorBox" class="hidden"></div>
+    </div>
+</main>
+
+<footer>
+    © 2026 Vipul Bishnoi. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
