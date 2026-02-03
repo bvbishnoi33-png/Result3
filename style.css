@@ -1,1 +1,144 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(0,0,0,0.4);
+    animation: slideDown 1s ease;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+.sub-header {
+    font-size: 18px;
+    margin-top: 8px;
+    color: #dcdcdc;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #ffffff;
+    color: #333;
+    padding: 35px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    animation: fadeIn 1.2s ease;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #2c5364;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2c5364;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #203a43;
+    transform: translateY(-2px);
+}
+
+/* RESULT BOX */
+#resultBox {
+    margin-top: 20px;
+    animation: fadeIn 0.6s ease;
+}
+
+#downloadBtn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #0f2027;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#downloadBtn:hover {
+    background: #000;
+}
+
+/* ERROR */
+#errorBox {
+    margin-top: 15px;
+    color: #c0392b;
+    font-weight: 600;
+    animation: shake 0.4s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
